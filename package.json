@@ -1,0 +1,51 @@
+{
+  "name": "dsh-memory-inherit",
+  "version": "0.1.0",
+  "description": "把 DeepSeek 网页版账号的历史对话拉下来，转成 dsh-persona-select 的「历史对话」注入新对话——让新账号继承旧账号的记忆。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "memory",
+    "persona",
+    "cordis",
+    "chat-history"
+  ],
+  "license": "MIT",
+  "author": "dsh-memory-inherit contributors",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "index.js",
+  "icon": "assets/icon.png",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "assets/icon.png",
+    "scripts/install-local.ps1",
+    "scripts/publish.ps1"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}

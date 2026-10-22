@@ -1,0 +1,3 @@
+- insert:
+    - id: memory-inherit
+      name: dsh-memory-inherit
